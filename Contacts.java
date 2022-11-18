@@ -2,88 +2,85 @@ package com.bridgelabz;
 
 public class Contacts {
 
-	/*
-	 * Ability to create a Contacts in Address Book with first and last names,
-	 * address, city, state, zip, phone number and email...
-	 */
-	private String firstName, lastName, address,city, state, zip, phoneNumber, email;
+    private String firstName, lastName, address, city, state, email;
+    private int zipCode;
+    private long phoneNumber;
 
-	public Contacts(String firstName, String lastName, String address, String city, String state, String zip,
-			String phoneNumber, String email) {
+    public String getFirstName() {
+        return firstName;
+    }
 
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.address = address;
-		this.city  = city;
-		this.state = state;
-		this.zip = zip;
-		this.phoneNumber = phoneNumber;
-		this.email = email;
+    public String getLastName() {
+        return lastName;
+    }
 
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getCity() {
-		return city;
-	}
+    public String getCity() {
+        return city;
+    }
 
-	public void setCity(String city) {
-		this.city = city;
-	}
+    public String getState() {
+        return state;
+    }
+    
+    public String getEmail() {
+        return email;
+    }
 
-	public String getState() {
-		return state;
-	}
+    public int getZipCode() {
+        return zipCode;
+    }
 
-	public void setState(String state) {
-		this.state = state;
-	}
+    public long getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	public String getZip() {
-		return zip;
-	}
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
 
-	public void setZip(String zip) {
-		this.zip = zip;
-	}
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setState(String state) {
+        this.state = state;
+    }
+    
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public void setZipCode(int zipCode) {
+        this.zipCode = zipCode;
+    }
 
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
+    public void setPhoneNumber(long phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    
+    @Override
+    public String toString() {
+        return "Contacts{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", email='" + email + '\'' +
+                ", zipCode=" + zipCode +
+                ", phoneNumber=" + phoneNumber +
+                '}';
+    }
 }

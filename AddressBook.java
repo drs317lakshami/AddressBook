@@ -1,21 +1,38 @@
 package com.bridgelabz;
 
-public class AddressBooks {
-	//city, state, zip, phoneNumber, email;
+import java.util.Scanner;
 
-		public static void main(String[] args) {
-			Contacts a = new Contacts( "DEVRAJ",  "SHARMA",  "DHAKA",  "MOTHIRI",  "BIHAR",  "845418",  "7562047829",  "devrajkumar3@gmail.com");
-			
-			System.out.println(a.getFirstName());
-			System.out.println(a.getLastName());
-			System.out.println(a.getAddress());
-			System.out.println(a.getCity());
-			System.out.println(a.getState());
-			System.out.println(a.getZip());
-			System.out.println(a.getPhoneNumber());
-			System.out.println(a.getEmail());
-			
+import java.util.Scanner;
 
-	}
+public class AddressBook {
 
+    Scanner sc = new Scanner(System.in);
+
+    public Contacts createContact() {
+    	Contacts person = new Contacts();
+        System.out.print("Enter First Name: ");
+        person.setFirstName(sc.next());
+        System.out.print("Enter Last Name: ");
+        person.setLastName(sc.next());
+        System.out.print("Enter Address: ");
+        person.setAddress(sc.next());
+        System.out.print("Enter City: ");
+        person.setCity(sc.next());
+        System.out.print("Enter State: ");
+        person.setState(sc.next());
+        System.out.print("Enter email: ");
+        person.setEmail(sc.next());
+        System.out.print("Enter ZipCode: ");
+        person.setZipCode(sc.nextInt());
+        System.out.print("Enter Phone Number: ");
+        person.setPhoneNumber(sc.nextLong());
+        System.out.println("created new contact");
+        return person;
+    }
+
+    public void addContact() {
+    	Contacts contactPerson = createContact();
+        System.out.println(contactPerson);
+        System.out.println("Contact added successfully");
+    }
 }
