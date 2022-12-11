@@ -1,10 +1,14 @@
 package com.bridgelabz;
 
-public class Contacts {
+public class ContactPerson {
 
     private String firstName, lastName, address, city, state, email;
     private int zipCode;
     private long phoneNumber;
+
+    public ContactPerson() {
+
+    }
 
     public String getFirstName() {
         return firstName;
@@ -72,7 +76,7 @@ public class Contacts {
     
     @Override
     public String toString() {
-        return "Contacts{" +
+        return "ContactPerson{" +
                 "firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", address='" + address + '\'' +
